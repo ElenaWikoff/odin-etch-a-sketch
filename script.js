@@ -1,3 +1,7 @@
+var mouseDown = false;
+
+window.addEventListener("mousedown", () => { mouseDown = true });
+window.addEventListener("mouseup", () => { mouseDown = false });
 
 document.addEventListener("DOMContentLoaded", function () {
     console.log("DOM Content Loaded");
@@ -26,8 +30,8 @@ const createSquares = (r) => {
             square.style.maxHeight = `${1 / r * 100}%`;
 
             // Add hover mouse events
-            square.addEventListener('mouseenter', handleSquareEnter);
-            square.addEventListener('mouseleave', handleSquareLeave);
+            square.addEventListener('mouseover', handleSquareEnter);
+            square.addEventListener('mousedown', handleSquareEnter);
 
             // Add squares container grid
             container.appendChild(square);
@@ -45,8 +49,12 @@ const setSquares = () => {
 }
 
 const handleSquareEnter = (event) => {
-    const square = event.target;
-    square.classList.add("over");
+    event.preventDefault();
+    if (mouseDown) {
+        const square = event.target;
+        square.classList.add("over");
+    }
+    console.log(mouseDown);
 }
 
 const handleSquareLeave = (event) => {
