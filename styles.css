@@ -43,9 +43,9 @@
     height: 100%;
     max-height: 6.25%;
     aspect-ratio: 1/1;
-    border: 1px solid black;
+    border-right: 1px solid black;
 }
 
 #container .square.over {
-    background-color: azure;
+    background-color: aquamarine;
 }
