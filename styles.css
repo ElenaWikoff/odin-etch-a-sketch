@@ -10,20 +10,26 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 50px;
+    /* height: 50px; */
 }
 
-#header>button {
+#header button {
     margin: 10px;
-    padding: 0 10px;
+    padding: 10px;
     height: 100%;
     border-radius: 5px;
-    background-color: aliceblue;
+    background-color: white;
     font-weight: bold;
 }
 
-#header>button:hover {
-    background-color: aquamarine;
+#header button:hover {
+    color: white;
+    background-color: black;
+}
+
+#header .button-flex {
+    display: flex;
+    gap: 2;
 }
 
 #container {
@@ -45,8 +51,45 @@
     aspect-ratio: 1/1;
     border: 1px solid gainsboro;
     background-color: white;
+    transition: background-color 0.1s ease-in-out;
 }
 
-#container .square.over {
-    background-color: aquamarine;
+#container .square[data-value="1"] {
+    background-color: rgba(0,0,0,0.1);
+}
+
+#container .square[data-value="2"] {
+    background-color: rgba(0,0,0,0.2);
+}
+
+#container .square[data-value="3"] {
+    background-color: rgba(0,0,0,0.3);
+}
+
+#container .square[data-value="4"] {
+    background-color: rgba(0,0,0,0.4);
+}
+
+#container .square[data-value="5"] {
+    background-color: rgba(0,0,0,0.5);
+}
+
+#container .square[data-value="6"] {
+    background-color: rgba(0,0,0,0.6);
+}
+
+#container .square[data-value="7"] {
+    background-color: rgba(0,0,0,0.7);
+}
+
+#container .square[data-value="8"] {
+    background-color: rgba(0,0,0,0.8);
+}
+
+#container .square[data-value="9"] {
+    background-color: rgba(0,0,0,0.9);
+}
+
+#container .square[data-value="10"] {
+    background-color: rgba(0,0,0,1);
 }
